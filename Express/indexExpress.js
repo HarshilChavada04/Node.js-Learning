@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
         name: 'Harshil Chavada',
     }
     res.status(200).json(objData);
+});
+
+app.get('/test', (req, res) => {
+    res.status(200).json({message: 'Data received successfully'});
 })
 
 app.listen(PORT, () => {
