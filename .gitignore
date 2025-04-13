@@ -1,0 +1,25 @@
+# Node.js dependencies
+/node_modules/
+
+# Logs
+*.log
+*.log.*
+
+# Environment files
+.env
+
+# OS files
+.DS_Store       # For macOS
+Thumbs.db       # For Windows
+
+# npm package-lock or yarn lock files (optional, based on preference)
+package-lock.json
+yarn.lock
+
+# Build output (if any)
+dist/
+build/
+
+# IDE/editor files
+.vscode/
+.idea/
