@@ -34,21 +34,56 @@ async function runQueryExamples() {
     //   tags: ["developer", "designer", "manager"],
     // });
 
-    const newUser = new User({
-      name: "Harshil Chavada",
-      email: "harshilchavadatest@gmail.com",
-      age: 22,
-      isActive: true,
-      tags: ["developer", "designer", "manager"],
-    });
+    // const newUser = await User.insertMany([
+    //   {
+    //     name: "Harshil Chavada",
+    //     email: "harshilchavadatest@gmail.com",
+    //     age: 22,
+    //     isActive: true,
+    //     tags: ["developer", "designer", "manager"],
+    //   },
+    //   {
+    //     name: "Aanshi Chhaiya",
+    //     email: "aanshichaaiya@gmail.com",
+    //     age: 7,
+    //     isActive: true,
+    //     tags: ["youtuber", "makeup-artist", "designer"],
+    //   },
+    // ]);
 
-    await newUser.save();
+    // await newUser.save();
+    // console.log("Created new user: ", newUser);
 
-    console.log("Created new user: ", newUser);
+    // const getAllUsers = await User.find({
+    //   isActive: true,
+    // });
+
+    // const selectedFields = await User.find()
+    //   .select("name email -_id")
+    //   .limit(5)
+    //   //   .skip(1);
+    //   .sort({ age: 1 });
+
+    // const countDocuments = await User.countDocuments({ age: { $gt: 10 } });
+
+    // const deleteUser = await User.findByIdAndDelete("68860a4f45e91c33bd1af7c2");
+
+    const updateUser = await User.findByIdAndUpdate(
+      "688601aa2b0dbe7e8cbbbde7",
+      {
+        $set: {
+          age: 7,
+        },
+      },
+      {
+        new: true,
+      }
+    );
+    console.log(updateUser);
   } catch (e) {
   } finally {
-    console.log("Closed connection");
     await mongoose.connection.close();
+    console.log("Closed connection");
   }
 }
 
