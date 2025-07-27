@@ -1,0 +1,24 @@
+{
+  "name": "node.js-learning",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/HarshilChavada04/Node.js-Learning#readme",
+  "bugs": {
+    "url": "https://github.com/HarshilChavada04/Node.js-Learning/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshilChavada04/Node.js-Learning.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "mongoose": "^8.16.5"
+  }
+}
